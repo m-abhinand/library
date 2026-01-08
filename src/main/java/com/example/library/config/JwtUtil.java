@@ -11,7 +11,6 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    // MUST be at least 32 chars for HS256
     private static final String SECRET =
             "my-super-secret-key-my-super-secret-key";
 

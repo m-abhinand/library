@@ -25,10 +25,13 @@ public class BookController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
+
     @PostMapping
     public BookEntity addBook(@RequestBody BookEntity book) {
         return service.save(book);
     }
+
+
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public void deleteBook(@PathVariable Long id) {
